@@ -5,6 +5,14 @@ import { ModeSelector } from './components/ModeSelector';
 import { TicTacToe } from './games/tictactoe/TicTacToe';
 import { Connect4 } from './games/connect4/Connect4';
 import { Hangman } from './games/hangman/Hangman';
+import { RPS } from './games/rps/RPS';
+import { Memory } from './games/memory/Memory';
+import { Simon } from './games/simon/Simon';
+import { Snake } from './games/snake/Snake';
+import { Puzzle2048 } from './games/puzzle2048/Puzzle2048';
+import { WouldYouRather } from './games/wouldyourather/WouldYouRather';
+import { TruthOrDare } from './games/truthordare/TruthOrDare';
+import { Trivia } from './games/trivia/Trivia';
 import './App.css';
 
 function App() {
@@ -22,6 +30,10 @@ function App() {
     setGameKey((prev) => prev + 1);
   };
 
+  // Games that support mode selection
+  const gamesWithModes: GameType[] = ['tictactoe', 'connect4', 'hangman', 'rps', 'memory'];
+  const showModeSelector = gamesWithModes.includes(selectedGame);
+
   const renderGame = () => {
     switch (selectedGame) {
       case 'tictactoe':
@@ -30,6 +42,22 @@ function App() {
         return <Connect4 key={gameKey} mode={selectedMode} />;
       case 'hangman':
         return <Hangman key={gameKey} mode={selectedMode} />;
+      case 'rps':
+        return <RPS key={gameKey} mode={selectedMode} />;
+      case 'memory':
+        return <Memory key={gameKey} mode={selectedMode} />;
+      case 'simon':
+        return <Simon key={gameKey} />;
+      case 'snake':
+        return <Snake key={gameKey} />;
+      case 'puzzle2048':
+        return <Puzzle2048 key={gameKey} />;
+      case 'wouldyourather':
+        return <WouldYouRather key={gameKey} />;
+      case 'truthordare':
+        return <TruthOrDare key={gameKey} />;
+      case 'trivia':
+        return <Trivia key={gameKey} />;
       default:
         return null;
     }
@@ -44,7 +72,9 @@ function App() {
       <div className="app-content">
         <div className="selectors">
           <GameSelector selectedGame={selectedGame} onGameChange={handleGameChange} />
-          <ModeSelector selectedMode={selectedMode} onModeChange={handleModeChange} />
+          {showModeSelector && (
+            <ModeSelector selectedMode={selectedMode} onModeChange={handleModeChange} />
+          )}
         </div>
 
         <div className="game-area">{renderGame()}</div>

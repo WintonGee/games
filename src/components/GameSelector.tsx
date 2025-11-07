@@ -10,27 +10,60 @@ export const GameSelector = ({
   selectedGame,
   onGameChange,
 }: GameSelectorProps) => {
-  const games: { type: GameType; name: string; description: string }[] = [
-    { type: 'tictactoe', name: 'Tic-Tac-Toe', description: 'Classic 3x3 grid game' },
-    { type: 'connect4', name: 'Connect 4', description: 'Connect four in a row' },
-    { type: 'hangman', name: 'Hangman', description: 'Guess the word' },
+  const gameCategories = [
+    {
+      category: 'Board Games',
+      games: [
+        { type: 'tictactoe' as GameType, name: 'Tic-Tac-Toe', description: '3x3 grid game' },
+        { type: 'connect4' as GameType, name: 'Connect 4', description: 'Connect four' },
+      ],
+    },
+    {
+      category: 'Quick Games',
+      games: [
+        { type: 'rps' as GameType, name: 'Rock Paper Scissors', description: 'Quick match' },
+        { type: 'hangman' as GameType, name: 'Hangman', description: 'Guess the word' },
+        { type: 'memory' as GameType, name: 'Memory', description: 'Match cards' },
+      ],
+    },
+    {
+      category: 'Puzzle Games',
+      games: [
+        { type: 'simon' as GameType, name: 'Simon Says', description: 'Pattern memory' },
+        { type: 'snake' as GameType, name: 'Snake', description: 'Classic arcade' },
+        { type: 'puzzle2048' as GameType, name: '2048', description: 'Merge tiles' },
+      ],
+    },
+    {
+      category: 'Party Games',
+      games: [
+        { type: 'wouldyourather' as GameType, name: 'Would You Rather', description: 'Tough choices' },
+        { type: 'truthordare' as GameType, name: 'Truth or Dare', description: 'Classic party' },
+        { type: 'trivia' as GameType, name: 'Trivia', description: 'Test knowledge' },
+      ],
+    },
   ];
 
   return (
     <div className="game-selector">
       <h2>Select a Game</h2>
-      <div className="game-buttons">
-        {games.map((game) => (
-          <button
-            key={game.type}
-            className={`game-button ${selectedGame === game.type ? 'active' : ''}`}
-            onClick={() => onGameChange(game.type)}
-          >
-            <div className="game-name">{game.name}</div>
-            <div className="game-description">{game.description}</div>
-          </button>
-        ))}
-      </div>
+      {gameCategories.map((category) => (
+        <div key={category.category} className="game-category">
+          <h3 className="category-title">{category.category}</h3>
+          <div className="game-buttons">
+            {category.games.map((game) => (
+              <button
+                key={game.type}
+                className={`game-button ${selectedGame === game.type ? 'active' : ''}`}
+                onClick={() => onGameChange(game.type)}
+              >
+                <div className="game-name">{game.name}</div>
+                <div className="game-description">{game.description}</div>
+              </button>
+            ))}
+          </div>
+        </div>
+      ))}
     </div>
   );
 };

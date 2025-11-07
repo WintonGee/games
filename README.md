@@ -1,17 +1,19 @@
 # Game Collection
 
-A modern, responsive web-based game collection featuring Tic-Tac-Toe, Connect 4, and Hangman with both singleplayer (vs AI) and multiplayer (local) modes.
+A modern, responsive web-based game collection featuring 11 different games including board games, puzzles, arcade classics, and party games!
 
 ## Features
 
-- **Three Classic Games**
-  - Tic-Tac-Toe with unbeatable AI using Minimax algorithm
-  - Connect 4 with strategic AI
-  - Hangman with word guessing
+- **11 Diverse Games**
+  - **Board Games**: Tic-Tac-Toe, Connect 4
+  - **Quick Games**: Rock Paper Scissors, Hangman, Memory
+  - **Puzzle Games**: Simon Says, Snake, 2048
+  - **Party Games**: Would You Rather, Truth or Dare, Trivia
 
-- **Two Game Modes**
+- **Multiple Game Modes**
   - Singleplayer: Play against AI opponents
   - Multiplayer: Play locally with a friend
+  - Party Mode: Great for groups and gatherings
 
 - **Modern Tech Stack**
   - React 18 with TypeScript
@@ -85,22 +87,70 @@ src/
 └── index.css           # Global styles
 ```
 
-## How to Play
+## Games Overview
 
-### Tic-Tac-Toe
+### Board Games
+
+**Tic-Tac-Toe**
 - Classic 3x3 grid game
-- Get three in a row (horizontal, vertical, or diagonal) to win
-- In singleplayer mode, the AI uses the Minimax algorithm for optimal play
+- AI uses unbeatable Minimax algorithm
+- Supports singleplayer and multiplayer modes
 
-### Connect 4
+**Connect 4**
 - Drop colored discs into a 7x6 grid
-- Connect four discs in a row (horizontal, vertical, or diagonal) to win
-- In singleplayer mode, the AI uses strategic positioning and blocking
+- Connect four in a row to win
+- Strategic AI opponent in singleplayer mode
 
-### Hangman
-- Guess the hidden word by selecting letters
-- You have 6 wrong guesses before losing
-- Words are tech-related terms
+### Quick Games
+
+**Rock Paper Scissors**
+- Classic hand game with score tracking
+- Play against AI or a friend
+- Best-of-many rounds format
+
+**Hangman**
+- Guess the hidden word letter by letter
+- 6 wrong guesses allowed
+- Tech-themed word list
+
+**Memory**
+- Match pairs of cards
+- Compete for best score in multiplayer
+- Track moves in singleplayer
+
+### Puzzle Games
+
+**Simon Says**
+- Pattern memory challenge
+- Increasing difficulty levels
+- Beat your high score
+
+**Snake**
+- Classic arcade game
+- Use arrow keys to navigate
+- Eat food to grow and score points
+
+**2048**
+- Slide and merge number tiles
+- Reach the 2048 tile to win
+- Keyboard-controlled puzzle game
+
+### Party Games
+
+**Would You Rather**
+- Tough choice questions
+- Vote tracking and statistics
+- Perfect for groups
+
+**Truth or Dare**
+- Classic party game
+- Randomized truths and dares
+- No repeats until all used
+
+**Trivia**
+- Multiple choice quiz game
+- Various categories
+- Track your score and accuracy
 
 ## Architecture Highlights
 

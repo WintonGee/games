@@ -1,0 +1,94 @@
+.puzzle2048-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 500px;
+}
+
+.puzzle2048-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 400px;
+}
+
+.puzzle2048-title {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #776e65;
+}
+
+.puzzle2048-score {
+  background: #bbada0;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 80px;
+}
+
+.puzzle2048-score .score-label {
+  font-size: 0.8rem;
+  color: #eee4da;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.puzzle2048-score .score-value {
+  font-size: 1.5rem;
+  color: white;
+  font-weight: bold;
+}
+
+.puzzle2048-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: #bbada0;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.puzzle2048-row {
+  display: flex;
+  gap: 10px;
+}
+
+.puzzle2048-tile {
+  width: 90px;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: bold;
+  border-radius: 6px;
+  transition: all 0.15s ease;
+}
+
+.puzzle2048-tile.empty {
+  opacity: 0.4;
+}
+
+.puzzle2048-instructions {
+  font-size: 0.9rem;
+  color: #666;
+  text-align: center;
+  max-width: 400px;
+}
+
+@media (max-width: 480px) {
+  .puzzle2048-tile {
+    width: 70px;
+    height: 70px;
+    font-size: 1.5rem;
+  }
+
+  .puzzle2048-title {
+    font-size: 2rem;
+  }
+}

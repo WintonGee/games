@@ -1,6 +1,17 @@
-export type GameMode = 'singleplayer' | 'multiplayer';
+export type GameMode = 'singleplayer' | 'multiplayer' | 'party';
 
-export type GameType = 'tictactoe' | 'connect4' | 'hangman';
+export type GameType =
+  | 'tictactoe'
+  | 'connect4'
+  | 'hangman'
+  | 'rps'
+  | 'memory'
+  | 'simon'
+  | 'snake'
+  | 'puzzle2048'
+  | 'wouldyourather'
+  | 'truthordare'
+  | 'trivia';
 
 export interface GameEngine<T> {
   getInitialState(): T;
