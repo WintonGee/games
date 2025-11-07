@@ -13,6 +13,12 @@ import { Puzzle2048 } from './games/puzzle2048/Puzzle2048';
 import { WouldYouRather } from './games/wouldyourather/WouldYouRather';
 import { TruthOrDare } from './games/truthordare/TruthOrDare';
 import { Trivia } from './games/trivia/Trivia';
+import { Wordle } from './games/wordle/Wordle';
+import { Blackjack } from './games/blackjack/Blackjack';
+import { WhackAMole } from './games/whackamole/WhackAMole';
+import { WordSearch } from './games/wordsearch/WordSearch';
+import { NeverHaveIEver } from './games/neverhaveiever/NeverHaveIEver';
+import { Charades } from './games/charades/Charades';
 import './App.css';
 
 function App() {
@@ -58,6 +64,18 @@ function App() {
         return <TruthOrDare key={gameKey} />;
       case 'trivia':
         return <Trivia key={gameKey} />;
+      case 'wordle':
+        return <Wordle key={gameKey} />;
+      case 'blackjack':
+        return <Blackjack key={gameKey} />;
+      case 'whackamole':
+        return <WhackAMole key={gameKey} />;
+      case 'wordsearch':
+        return <WordSearch key={gameKey} />;
+      case 'neverhaveiever':
+        return <NeverHaveIEver key={gameKey} />;
+      case 'charades':
+        return <Charades key={gameKey} />;
       default:
         return null;
     }

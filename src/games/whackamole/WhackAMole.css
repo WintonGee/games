@@ -1,0 +1,108 @@
+.whackamole-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
+  max-width: 600px;
+  padding: 1.5rem;
+}
+
+.whackamole-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333;
+  margin: 0;
+}
+
+.whackamole-stats {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.whackamole-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  padding: 2rem;
+  background: #8b4513;
+  border-radius: 16px;
+}
+
+.mole-hole {
+  width: 120px;
+  height: 120px;
+  background: #654321;
+  border: 4px solid #543210;
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.1s ease;
+}
+
+.mole-hole:hover {
+  transform: scale(1.05);
+}
+
+.mole-hole:active {
+  transform: scale(0.95);
+}
+
+.mole {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4rem;
+  position: absolute;
+  bottom: -100%;
+  transition: bottom 0.2s ease;
+}
+
+.mole-hole.mole-up .mole {
+  bottom: 0;
+}
+
+.whackamole-result {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 2rem;
+}
+
+.game-over {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #667eea;
+}
+
+.final-score {
+  font-size: 1.8rem;
+  color: #333;
+}
+
+.whackamole-instructions {
+  font-size: 0.9rem;
+  color: #666;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .mole-hole {
+    width: 90px;
+    height: 90px;
+  }
+
+  .mole {
+    font-size: 3rem;
+  }
+
+  .whackamole-grid {
+    padding: 1rem;
+    gap: 0.75rem;
+  }
+}

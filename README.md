@@ -1,14 +1,15 @@
 # Game Collection
 
-A modern, responsive web-based game collection featuring 11 different games including board games, puzzles, arcade classics, and party games!
+A modern, responsive web-based game collection featuring 17 different games including board games, puzzles, arcade classics, card games, and party games!
 
 ## Features
 
-- **11 Diverse Games**
+- **17 Diverse Games**
   - **Board Games**: Tic-Tac-Toe, Connect 4
-  - **Quick Games**: Rock Paper Scissors, Hangman, Memory
-  - **Puzzle Games**: Simon Says, Snake, 2048
-  - **Party Games**: Would You Rather, Truth or Dare, Trivia
+  - **Quick Games**: Rock Paper Scissors, Hangman, Memory, Whack-a-Mole
+  - **Puzzle Games**: Simon Says, Snake, 2048, Wordle, Word Search
+  - **Card Games**: Blackjack
+  - **Party Games**: Would You Rather, Truth or Dare, Trivia, Never Have I Ever, Charades
 
 - **Multiple Game Modes**
   - Singleplayer: Play against AI opponents
@@ -118,6 +119,11 @@ src/
 - Compete for best score in multiplayer
 - Track moves in singleplayer
 
+**Whack-a-Mole**
+- Fast-paced reflex game
+- 30 second time limit
+- Click moles as they pop up to score points
+
 ### Puzzle Games
 
 **Simon Says**
@@ -135,6 +141,23 @@ src/
 - Reach the 2048 tile to win
 - Keyboard-controlled puzzle game
 
+**Wordle**
+- Guess the 5-letter word in 6 tries
+- Color-coded feedback for each guess
+- On-screen keyboard with letter status
+
+**Word Search**
+- Find hidden words in a 12x12 grid
+- Words can be horizontal, vertical, or diagonal
+- Click and drag to select words
+
+### Card Games
+
+**Blackjack**
+- Classic 21 card game
+- Beat the dealer without going over 21
+- Dealer hits until 17
+
 ### Party Games
 
 **Would You Rather**
@@ -151,6 +174,16 @@ src/
 - Multiple choice quiz game
 - Various categories
 - Track your score and accuracy
+
+**Never Have I Ever**
+- Classic party game prompts
+- Random selection without repeats
+- Perfect for group gatherings
+
+**Charades**
+- Act out words from different categories
+- 60-second timer per round
+- Categories: Movies, Actions, Animals, Occupations
 
 ## Architecture Highlights
 

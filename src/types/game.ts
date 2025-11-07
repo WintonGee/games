@@ -11,7 +11,15 @@ export type GameType =
   | 'puzzle2048'
   | 'wouldyourather'
   | 'truthordare'
-  | 'trivia';
+  | 'trivia'
+  | 'wordle'
+  | 'blackjack'
+  | 'whackamole'
+  | 'wordsearch'
+  | 'neverhaveiever'
+  | 'charades'
+  | 'minesweeper'
+  | 'slidingpuzzle';
 
 export interface GameEngine<T> {
   getInitialState(): T;
